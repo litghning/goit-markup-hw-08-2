@@ -1,0 +1,31 @@
+// .card__set {
+//     display: flex;
+//     flex-wrap: wrap;
+//     margin-top: calc(-1 * var(--card-gap-top));
+//     margin-left: calc(-1 * var(--card-gap-left));
+// }
+
+// .card__item {
+//     margin-top: var(--card-gap-top);
+//     margin-left: var(--card-gap-left);
+//     flex-basis: calc(100% / var(--card-item) - var(--card-gap-left));
+// }
+.card-set {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: var(--card-gap-left);
+    row-gap: var(--card-gap-top);
+    
+
+    @media screen and (min-width: 768px) {
+        --card-item: 2;
+    }
+    
+}
+
+.card-item {
+    /* margin-top: var(--card-gap-top);
+  margin-left: var(--card-gap-left); */
+    /* flex-basis: calc(100% / var(--card-item) - var(--card-gap-left)); */
+    flex-basis: calc((100% - (var(--card-item) - 1) * var(--card-gap-left)) / var(--card-item));
+}
