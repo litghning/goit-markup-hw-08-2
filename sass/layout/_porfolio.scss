@@ -1,7 +1,40 @@
 .portfolio__list {
-    display: flex;
+    display: block;
+
+    @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+    @include desktop{
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
 }
 
+.portfolio__item {
+    width: 100%;
+    max-width: 450px;
+
+    @include tablet {
+        flex-basis: calc((100% - 2 * 30px) / 2);
+        margin: 15px;
+        width: 354px;
+    }
+
+    @include desktop {
+        flex-basis: calc((100% - 4 * 30px) / 3);
+        margin: 15px;
+        width: 270px;
+    }
+
+    &:not(:last-child) {
+        @include tablet {
+            margin-bottom: 30px;
+        }
+    }
+}
 .portfolio__link {
     display: block;
     transition: box-shadow var(--cubic-bezier);
@@ -37,8 +70,13 @@
     transform: translateY(100%);
     transition: transform var(--cubic-bezier), background-color var(--cubic-bezier),
         color var(--cubic-bezier);
-}
-
+        @include tablet{
+            padding: 49px 24px 77px 24px;
+        }
+        @include desktop{
+            padding: 63px 24px;
+        }
+    }
 .portfolio__link:hover .portfolio__bac-text,
 .portfolio__link:focus .portfolio__bac-text {
     transform: translateY(0);

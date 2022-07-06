@@ -18,45 +18,84 @@
   </head>
 
   <body class="body">
-    <header class="header">
-      <div class="header__page conteiner">
-        <a href="" class="logo header__logo"
+    <header class="header" data-menu>
+      <div class="container header__container">
+        <a class="logo header__logo" href="./index.html"
           >Web<span class="logo__header-accent">Studio</span></a
         >
-        <nav class="header__nav">
-          <ul class="header__list list">
-            <li class="header__item">
-              <a href="./index.html" class="header__link link">Студия</a>
-            </li>
-            <li class="header__item">
-              <a href="" class="header__link current link">Портфолио</a>
-            </li>
-            <li class="header__item">
-              <a href="" class="header__link link">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <ul class="header__contacs-list list">
-          <li class="header__contacs-item">
-            <a
-              href="mailto:info@devstudio.com"
-              class="header__link envelope link"
-            >
-              <svg class="contacs__icon" width="16px" height="12px">
-                <use href="./image/symbol-defs.svg#icon-envelope"></use>
-              </svg>
-              info@devstudio.com
-            </a>
-          </li>
-          <li class="header__contacs-item">
-            <a href="tel:+380961111111" class="header__link smarthone link">
-              <svg class="contacs__icon" width="10px" height="16px">
-                <use href="./image/symbol-defs.svg#icon-smartphone"></use>
-              </svg>
-              +38 096 111 11 11
-            </a>
-          </li>
-        </ul>
+        <div class="header__nav-mob">
+          <button class="header__btn-mob" data-menu-button>
+            <svg width="40" height="40">
+              <use
+                class="btn-open"
+                href="./image/symbol-defs.svg#icon-menu-mob"
+              ></use>
+              <use
+                class="btn-close"
+                href="./image/symbol-defs.svg#icon-close-mob"
+              ></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="header__content">
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link link" href="./index.html">Cтудия</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link current link" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="contacts">
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a
+                  class="contacts__link link contacts__link--big"
+                  href="tel:+380961111111"
+                >
+                  <div class="icon">
+                    <svg class="icon__tel" width="10" height="16">
+                      <use href="./image/symbol-defs.svg#icon-smartphone"></use>
+                    </svg>
+                  </div>
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="contacts__item">
+                <a class="contacts__link link" href="mailto:info@devstudio.com">
+                  <div class="icon">
+                    <svg class="icon__mail" width="16" height="12">
+                      <use href="./image/symbol-defs.svg#icon-envelope"></use>
+                    </svg>
+                  </div>
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="social">
+              <li class="social__item">
+                <a class="social__link link" href="./index.html">Instagram</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link link" href="./portfolio.html">Twitter</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link link" href="">Facebook</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link link" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -285,7 +324,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="conteiner">
+      <div class="footer__container conteiner">
         <div class="footer__contant">
           <a href="" class="logo footer__logo"
             >Web<span class="logo__footer-accent">Studio</span></a
@@ -308,7 +347,7 @@
               </li>
               <li class="footer__item">
                 <a href="tel:+380991111111" class="footer__link link"
-                  >+38 0991111111</a
+                  >+38 099 111 11 11</a
                 >
               </li>
             </ul>
@@ -367,24 +406,28 @@
             </li>
           </ul>
         </div>
-        <div class="footer__contant">
-          <p class="footer__title">Подпишитесь на рассылку</p>
+        <div class="footer__contant-form">
+          <p class="footer__contact-title">Подпишитесь на рассылку</p>
           <form class="footer__send">
-            <input
-              type="email"
-              class="footer__input"
-              name="E-mail"
-              placeholder="E-mail"
-            />
-            <button type="submit" class="hero__btn btn">
-              Отправить
-              <svg class="footer__send-icon" width="24px" height="24px">
-                <use href="./image/symbol-defs.svg#icon-send"></use>
-              </svg>
-            </button>
+            <div class="footer__wrap">
+              <input
+                type="email"
+                class="footer__input"
+                name="E-mail"
+                placeholder="E-mail"
+              />
+
+              <button type="submit" class="hero__btn btn">
+                Отправить
+                <svg class="footer__send-icon" width="24px" height="24px">
+                  <use href="./image/symbol-defs.svg#icon-send"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

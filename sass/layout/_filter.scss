@@ -4,12 +4,22 @@
 
 .filter__btn-list {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 50px;
+    @include tablet {
+        margin-bottom: 30px;
+        justify-content: center;
+    }
+    
+    @include desktop {
+        margin-bottom: 50px;
+    }
 }
+
 
 .filter__item:not(:last-child) {
     margin-right: 8px;
+    margin-bottom: 15px;
 }
 
 .filter__btn {
